@@ -1,0 +1,9 @@
+.idea/
+
+*build*/
+
+cmake.h
+
+.vscode/
+
+new_seq/
