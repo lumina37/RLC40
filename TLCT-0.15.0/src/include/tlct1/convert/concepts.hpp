@@ -1,7 +1,7 @@
 #pragma once
 
-#include "concepts/neighbors.hpp"
-#include "concepts/state.hpp"
+#include "tlct1/convert/concepts/neighbors.hpp"
+#include "tlct1/convert/concepts/state.hpp"
 
 namespace tlct1::cvt::concepts {
 

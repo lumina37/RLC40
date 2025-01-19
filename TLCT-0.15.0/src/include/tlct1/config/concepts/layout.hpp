@@ -4,8 +4,8 @@
 
 #include <opencv2/core.hpp>
 
-#include "calib.hpp"
-#include "specific.hpp"
+#include "tlct1/config/concepts/calib.hpp"
+#include "tlct1/config/concepts/specific.hpp"
 
 namespace tlct1::_cfg::concepts {
 

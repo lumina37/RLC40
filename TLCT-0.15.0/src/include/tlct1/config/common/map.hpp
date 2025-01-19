@@ -7,8 +7,8 @@
 #include <sstream>
 #include <string>
 
-#include "enums.hpp"
 #include "tlct1/common/defines.h"
+#include "tlct1/config/common/enums.hpp"
 #include "tlct1/config/concepts/factory.hpp"
 #include "tlct1/helper/charset.hpp"
 #include "tlct1/helper/constexpr/string.hpp"

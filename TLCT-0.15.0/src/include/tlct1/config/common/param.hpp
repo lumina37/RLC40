@@ -5,9 +5,9 @@
 
 #include <opencv2/core.hpp>
 
-#include "generic.hpp"
-#include "map.hpp"
 #include "tlct1/common/defines.h"
+#include "tlct1/config/common/generic.hpp"
+#include "tlct1/config/common/map.hpp"
 #include "tlct1/config/concepts.hpp"
 #include "tlct1/config/raytrix/layout.hpp"
 #include "tlct1/config/tspc/layout.hpp"
@@ -31,7 +31,7 @@ public:
     TLCT1_API inline ParamConfig_(ParamConfig_&& rhs) noexcept = default;
     TLCT1_API inline ParamConfig_& operator=(ParamConfig_&& rhs) noexcept = default;
     TLCT1_API inline ParamConfig_(GenericParamConfig&& generic_cfg, TSpecificConfig&& spec_cfg,
-                                 TCalibConfig&& calib_cfg) noexcept
+                                  TCalibConfig&& calib_cfg) noexcept
         : generic_cfg_(std::move(generic_cfg)), spec_cfg_(std::move(spec_cfg)), calib_cfg_(std::move(calib_cfg)){};
 
     // Initialize from

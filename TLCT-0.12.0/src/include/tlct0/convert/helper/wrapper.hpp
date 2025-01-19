@@ -4,9 +4,9 @@
 #include <opencv2/imgproc.hpp>
 #include <opencv2/quality.hpp>
 
-#include "grad.hpp"
 #include "tlct0/common/defines.h"
 #include "tlct0/config/tspc/layout.hpp"
+#include "tlct0/convert/helper/grad.hpp"
 
 namespace tlct0::cvt::_hp {
 

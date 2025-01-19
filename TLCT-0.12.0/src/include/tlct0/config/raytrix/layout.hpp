@@ -7,9 +7,9 @@
 #include <opencv2/core.hpp>
 #include <opencv2/imgproc.hpp>
 
-#include "calib.hpp"
 #include "tlct0/common/defines.h"
 #include "tlct0/config/concepts/layout.hpp"
+#include "tlct0/config/raytrix/calib.hpp"
 
 namespace tlct0::cfg::raytrix {
 
@@ -30,7 +30,7 @@ public:
     TLCT0_API inline Layout& operator=(Layout&& rhs) noexcept = default;
     TLCT0_API inline Layout(Layout&& rhs) noexcept = default;
     TLCT0_API inline Layout(cv::Point2d center_mi, cv::Size imgsize, const TCalibConfig::LenOffsets lofs,
-                           double diameter, double rotation) noexcept;
+                            double diameter, double rotation) noexcept;
 
     // Initialize from
     [[nodiscard]] TLCT0_API static inline Layout fromCfgAndImgsize(const TCalibConfig& cfg, cv::Size imgsize);

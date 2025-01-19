@@ -1,5 +1,5 @@
 #pragma once
 
-#include "helper/functional.hpp"
-#include "helper/microimages.hpp"
-#include "helper/roi.hpp"
+#include "tlct1/convert/helper/functional.hpp"
+#include "tlct1/convert/helper/microimages.hpp"
+#include "tlct1/convert/helper/roi.hpp"

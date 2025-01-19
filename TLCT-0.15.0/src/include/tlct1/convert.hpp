@@ -1,10 +1,10 @@
 #pragma once
 
-#include "convert/concepts.hpp"
-#include "convert/helper.hpp"
-#include "convert/patchsize.hpp"
-#include "convert/raytrix.hpp"
-#include "convert/tspc.hpp"
+#include "tlct1/convert/concepts.hpp"
+#include "tlct1/convert/helper.hpp"
+#include "tlct1/convert/patchsize.hpp"
+#include "tlct1/convert/raytrix.hpp"
+#include "tlct1/convert/tspc.hpp"
 
 namespace tlct1 {
 

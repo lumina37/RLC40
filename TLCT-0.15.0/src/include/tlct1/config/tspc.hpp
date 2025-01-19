@@ -1,9 +1,9 @@
 #pragma once
 
-#include "tspc/calib.hpp"
-#include "tspc/layout.hpp"
-#include "tspc/param.hpp"
-#include "tspc/specific.hpp"
+#include "tlct1/config/tspc/calib.hpp"
+#include "tlct1/config/tspc/layout.hpp"
+#include "tlct1/config/tspc/param.hpp"
+#include "tlct1/config/tspc/specific.hpp"
 
 namespace tlct1::cfg::tspc {
 

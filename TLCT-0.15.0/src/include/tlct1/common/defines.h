@@ -1,5 +1,5 @@
 #pragma once
 
-#include "cmake.h"
+#include "tlct1/common/cmake.h"
 
 #define TLCT1_API

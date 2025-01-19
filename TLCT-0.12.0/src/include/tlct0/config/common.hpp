@@ -1,5 +1,5 @@
 #pragma once
 
-#include "common/cfg_map.hpp"
-#include "common/enums.hpp"
-#include "common/param.hpp"
+#include "tlct0/config/common/cfg_map.hpp"
+#include "tlct0/config/common/enums.hpp"
+#include "tlct0/config/common/param.hpp"

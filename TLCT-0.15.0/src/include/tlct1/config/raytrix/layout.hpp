@@ -6,10 +6,10 @@
 
 #include <opencv2/imgproc.hpp>
 
-#include "calib.hpp"
-#include "specific.hpp"
 #include "tlct1/common/defines.h"
 #include "tlct1/config/concepts.hpp"
+#include "tlct1/config/raytrix/calib.hpp"
+#include "tlct1/config/raytrix/specific.hpp"
 #include "tlct1/helper/constexpr/math.hpp"
 
 namespace tlct1::_cfg::raytrix {
@@ -36,15 +36,15 @@ public:
     TLCT1_API inline Layout(Layout&& rhs) noexcept = default;
     TLCT1_API inline Layout& operator=(Layout&& rhs) noexcept = default;
     TLCT1_API inline Layout(cv::Point2d left_top, bool is_out_shift, double x_unit_shift, double y_unit_shift,
-                           cv::Size imgsize, int mirows, TMiCols micols, TIdx2Type idx2type, double diameter,
-                           double rotation) noexcept
+                            cv::Size imgsize, int mirows, TMiCols micols, TIdx2Type idx2type, double diameter,
+                            double rotation) noexcept
         : left_top_(left_top), is_out_shift_(is_out_shift), x_unit_shift_(x_unit_shift), y_unit_shift_(y_unit_shift),
           imgsize_(imgsize), mirows_(mirows), micols_(micols), idx2type_(idx2type), diameter_(diameter),
           radius_(diameter / 2.0), rotation_(rotation), upsample_(1){};
 
     // Initialize from
     [[nodiscard]] TLCT1_API static inline Layout fromCalibAndSpecConfig(const TCalibConfig& calib_cfg,
-                                                                       const TSpecificConfig& spec_cfg);
+                                                                        const TSpecificConfig& spec_cfg);
 
     // Non-const methods
     TLCT1_API inline Layout& upsample(int factor) noexcept;
@@ -60,7 +60,10 @@ public:
     [[nodiscard]] TLCT1_API inline double getRotation() const noexcept { return rotation_; };
     [[nodiscard]] TLCT1_API inline int getUpsample() const noexcept { return upsample_; };
     [[nodiscard]] TLCT1_API inline int getMIRows() const noexcept { return mirows_; };
-    [[nodiscard]] TLCT1_API inline int getMICols(const int row) const noexcept { return micols_[row % micols_.size()]; };
+    [[nodiscard]] TLCT1_API inline int getMICols(const int row) const noexcept
+    {
+        return micols_[row % micols_.size()];
+    };
     [[nodiscard]] TLCT1_API inline int getMIMaxCols() const noexcept { return std::max(micols_[0], micols_[1]); };
     [[nodiscard]] TLCT1_API inline int getMIMinCols() const noexcept { return std::min(micols_[0], micols_[1]); };
     [[nodiscard]] TLCT1_API inline cv::Point2d getMICenter(int row, int col) const noexcept;

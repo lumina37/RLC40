@@ -4,9 +4,9 @@
 
 #include <opencv2/core.hpp>
 
-#include "calib.hpp"
 #include "tlct1/common/defines.h"
 #include "tlct1/config/concepts.hpp"
+#include "tlct1/config/raytrix/calib.hpp"
 
 namespace tlct1::_cfg::raytrix {
 
@@ -31,7 +31,7 @@ public:
     TLCT1_API inline SpecificConfig(SpecificConfig&& rhs) noexcept = default;
     TLCT1_API inline SpecificConfig& operator=(SpecificConfig&& rhs) noexcept = default;
     TLCT1_API inline SpecificConfig(cv::Size imgsize, int upsample, double psize_inflate, double max_psize,
-                                   double pattern_size, int psize_shortcut_threshold) noexcept
+                                    double pattern_size, int psize_shortcut_threshold) noexcept
         : imgsize_(imgsize), upsample_(upsample), psize_inflate_(psize_inflate),
           max_psize_(std::min(max_psize, 1.0 / psize_inflate)), pattern_size_(pattern_size),
           psize_shortcut_threshold_(psize_shortcut_threshold){};

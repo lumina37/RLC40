@@ -5,7 +5,7 @@
 #include <opencv2/core.hpp>
 #include <pugixml.hpp>
 
-#include "calib.hpp"
+#include "tlct0/config/concepts/calib.hpp"
 
 namespace tlct0::cfg::concepts {
 

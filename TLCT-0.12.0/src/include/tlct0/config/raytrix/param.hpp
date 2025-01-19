@@ -1,6 +1,6 @@
 #pragma once
 
-#include "calib.hpp"
+#include "tlct0/config/raytrix/calib.hpp"
 
 namespace tlct0::cfg::raytrix {
 

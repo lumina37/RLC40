@@ -1,5 +1,5 @@
 #pragma once
 
-#include "raytrix/multiview.hpp"
-#include "raytrix/patchsize.hpp"
-#include "raytrix/state.hpp"
+#include "tlct0/convert/raytrix/multiview.hpp"
+#include "tlct0/convert/raytrix/patchsize.hpp"
+#include "tlct0/convert/raytrix/state.hpp"

@@ -6,8 +6,8 @@
 #include <sstream>
 #include <string>
 
-#include "enums.hpp"
 #include "tlct0/common/defines.h"
+#include "tlct0/config/common/enums.hpp"
 
 namespace tlct0::cfg {
 

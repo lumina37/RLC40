@@ -3,9 +3,9 @@
 #include <opencv2/core.hpp>
 #include <opencv2/imgproc.hpp>
 
-#include "calib.hpp"
 #include "tlct0/common/defines.h"
 #include "tlct0/config/concepts/layout.hpp"
+#include "tlct0/config/tspc/calib.hpp"
 #include "tlct0/helper/static_math.hpp"
 
 namespace tlct0::cfg::tspc {
@@ -25,7 +25,7 @@ public:
     TLCT0_API inline Layout& operator=(Layout&& rhs) noexcept = default;
     TLCT0_API inline Layout(Layout&& rhs) noexcept = default;
     TLCT0_API inline Layout(cv::Point2d left_top, cv::Point2d right_top, cv::Point2d left_bottom, cv::Size imgsize,
-                           int mirows, int micols, double diameter, double rotation) noexcept;
+                            int mirows, int micols, double diameter, double rotation) noexcept;
 
     // Initialize from
     [[nodiscard]] TLCT0_API static inline Layout fromCfgAndImgsize(const TCalibConfig& cfg, cv::Size imgsize);

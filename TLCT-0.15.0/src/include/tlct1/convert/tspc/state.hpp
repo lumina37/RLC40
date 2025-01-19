@@ -7,12 +7,12 @@
 
 #include <opencv2/core.hpp>
 
-#include "multiview.hpp"
 #include "tlct1/common/defines.h"
 #include "tlct1/config/tspc.hpp"
 #include "tlct1/convert/concepts.hpp"
 #include "tlct1/convert/helper.hpp"
 #include "tlct1/convert/patchsize.hpp"
+#include "tlct1/convert/tspc/multiview.hpp"
 
 namespace tlct1::_cvt::tspc {
 
@@ -40,8 +40,8 @@ public:
     TLCT1_API inline State(State&& rhs) noexcept = default;
     TLCT1_API inline State& operator=(State&& rhs) noexcept = default;
     TLCT1_API inline State(TLayout&& layout, TSpecificConfig&& spec_cfg, TMIs&& mis,
-                          std::vector<PsizeRecord>&& prev_patchsizes, std::vector<PsizeRecord>&& patchsizes,
-                          TPsizeParams&& psize_params, MvParams&& mv_params, MvCache&& mv_cache)
+                           std::vector<PsizeRecord>&& prev_patchsizes, std::vector<PsizeRecord>&& patchsizes,
+                           TPsizeParams&& psize_params, MvParams&& mv_params, MvCache&& mv_cache)
         : src_32f_(), layout_(std::move(layout)), spec_cfg_(std::move(spec_cfg)), mis_(std::move(mis)),
           prev_patchsizes_(std::move(prev_patchsizes)), patchsizes_(std::move(patchsizes)),
           psize_params_(std::move(psize_params)), mv_params_(std::move(mv_params)), mv_cache_(std::move(mv_cache)){};

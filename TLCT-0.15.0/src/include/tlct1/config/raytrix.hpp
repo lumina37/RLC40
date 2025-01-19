@@ -1,9 +1,9 @@
 #pragma once
 
-#include "raytrix/calib.hpp"
-#include "raytrix/layout.hpp"
-#include "raytrix/param.hpp"
-#include "raytrix/specific.hpp"
+#include "tlct1/config/raytrix/calib.hpp"
+#include "tlct1/config/raytrix/layout.hpp"
+#include "tlct1/config/raytrix/param.hpp"
+#include "tlct1/config/raytrix/specific.hpp"
 
 namespace tlct1::cfg::raytrix {
 

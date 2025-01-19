@@ -6,8 +6,8 @@
 
 #include <opencv2/core.hpp>
 
-#include "cfg_map.hpp"
 #include "tlct0/common/defines.h"
+#include "tlct0/config/common/cfg_map.hpp"
 #include "tlct0/config/concepts/calib.hpp"
 
 namespace tlct0::cfg {
@@ -24,7 +24,7 @@ public:
     TLCT0_API inline CommonParamConfig& operator=(CommonParamConfig&& rhs) noexcept = default;
     TLCT0_API inline CommonParamConfig(CommonParamConfig&& rhs) noexcept = default;
     TLCT0_API inline CommonParamConfig(int views, cv::Range range, std::string src_pattern,
-                                      std::string dst_pattern) noexcept
+                                       std::string dst_pattern) noexcept
         : views_(views), range_(range), src_pattern_(std::move(src_pattern)), dst_pattern_(std::move(dst_pattern)){};
 
     // Initialize from

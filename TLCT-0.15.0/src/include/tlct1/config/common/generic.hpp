@@ -6,8 +6,8 @@
 
 #include <opencv2/core.hpp>
 
-#include "map.hpp"
 #include "tlct1/common/defines.h"
+#include "tlct1/config/common/map.hpp"
 
 namespace tlct1::_cfg {
 
@@ -23,7 +23,7 @@ public:
     TLCT1_API inline GenericParamConfig(GenericParamConfig&& rhs) noexcept = default;
     TLCT1_API inline GenericParamConfig& operator=(GenericParamConfig&& rhs) noexcept = default;
     TLCT1_API inline GenericParamConfig(int views, cv::Range range, std::string&& src_pattern,
-                                       std::string&& dst_pattern) noexcept
+                                        std::string&& dst_pattern) noexcept
         : views_(views), range_(range), src_pattern_(std::move(src_pattern)), dst_pattern_(std::move(dst_pattern)){};
 
     // Initialize from

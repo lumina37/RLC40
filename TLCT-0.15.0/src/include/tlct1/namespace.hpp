@@ -1,4 +1,4 @@
 #pragma once
 
-#include "namespace/raytrix.hpp"
-#include "namespace/tspc.hpp"
+#include "tlct1/namespace/raytrix.hpp"
+#include "tlct1/namespace/tspc.hpp"

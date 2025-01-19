@@ -5,8 +5,8 @@
 
 #include <opencv2/core.hpp>
 
-#include "direction.hpp"
 #include "tlct0/common/defines.h"
+#include "tlct0/convert/helper/direction.hpp"
 
 namespace tlct0::cvt::_hp {
 
@@ -54,12 +54,12 @@ public:
     TLCT0_API inline MatchShifts& operator=(MatchShifts&& rhs) noexcept = default;
     TLCT0_API inline MatchShifts(MatchShifts&& rhs) noexcept = default;
     TLCT0_API inline MatchShifts(cv::Point2d left, cv::Point2d right, cv::Point2d upleft, cv::Point2d upright,
-                                cv::Point2d downleft, cv::Point2d downright) noexcept
+                                 cv::Point2d downleft, cv::Point2d downright) noexcept
         : left_(left), right_(right), upleft_(upleft), upright_(upright), downleft_(downleft), downright_(downright){};
 
     // Initialize from
     [[nodiscard]] TLCT0_API static inline MatchShifts fromDiamAndKsize(const double diameter, const double ksize,
-                                                                      const double safe_radius_factor = 0.9) noexcept;
+                                                                       const double safe_radius_factor = 0.9) noexcept;
 
     // Const methods
     [[nodiscard]] TLCT0_API inline cv::Point2d getLeft() const noexcept { return left_; };

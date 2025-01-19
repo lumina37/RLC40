@@ -1,5 +1,5 @@
 #pragma once
 
-#include "tspc/calib.hpp"
-#include "tspc/layout.hpp"
-#include "tspc/param.hpp"
+#include "tlct0/config/tspc/calib.hpp"
+#include "tlct0/config/tspc/layout.hpp"
+#include "tlct0/config/tspc/param.hpp"
